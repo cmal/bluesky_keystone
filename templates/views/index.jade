@@ -1,0 +1,17 @@
+extends ../layouts/default
+
+block content
+	.container: .jumbotron
+		// img(src='/images/logo.svg', width='160')
+		h1 欢迎访问
+		p blue sky挽回爱情团队是专业的挽回爱情方案提供者，为你提供个性化挽回方法，提高恋爱等级等一体化解决方案。
+		p 团队成立于2008年，一直坚持“提高情商，留住真爱”的经营理念，在国内外打下坚实的基础，成为中国知名专业品牌。
+		p 我们相信，通过我们的不断努力和追求，一定能够实现与客户的互利共赢！
+		hr
+		if user && user.canAccessKeystone
+			p
+				a(href='/keystone').btn.btn-lg.btn-primary 打开管理界面
+		else
+			p We have created a default Admin user for you with the email <strong>admin@admin.com</strong> and the password <strong>admin</strong>.
+		hr
+		p 管理界面临时用户名 admin@admin.com 密码 admin

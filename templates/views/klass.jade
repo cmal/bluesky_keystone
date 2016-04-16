@@ -1,0 +1,22 @@
+extends ../layouts/default
+
+block intro
+  .container
+    h1 课程列表
+block content
+  .container
+    if locals.klasses.length
+      table.table
+        tr
+          th 主题
+          th 主讲人
+          th 授课时间
+          th 授课方式
+          th 内容介绍
+        each klass in locals.klasses
+          tr
+            td= klass.title
+            td= klass.speaker
+            td= klass._.scheduledDate.format('YYYY年MM月DD日 hh:mm')
+            td= klass.location
+            td= klass.content
